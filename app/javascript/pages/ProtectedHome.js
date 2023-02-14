@@ -4,7 +4,7 @@ const ProtectedHome = () => {
   
     return (
       <>
-      <h1>This is the ProtectedHome</h1>
+        <h1>This is the ProtectedHome</h1>
       </>
     );
   }

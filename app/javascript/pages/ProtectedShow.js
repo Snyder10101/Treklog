@@ -4,7 +4,7 @@ const ProtectedShow = () => {
   
     return (
       <>
-      <h1>This is the ProtectedShow</h1>
+        <h1>This is the ProtectedShow</h1>
       </>
     );
   }
