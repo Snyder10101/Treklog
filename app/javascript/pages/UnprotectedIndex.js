@@ -4,7 +4,7 @@ const UnprotectedIndex = () => {
   
     return (
       <>
-      <h1>This is the UnprotectedIndex</h1>
+        <h1>This is the UnprotectedIndex</h1>
       </>
     );
   }

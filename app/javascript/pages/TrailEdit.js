@@ -4,7 +4,7 @@ const TrailEdit = () => {
   
     return (
       <>
-      <h1>This is the TrailEdit</h1>
+        <h1>This is the TrailEdit</h1>
       </>
     );
   }

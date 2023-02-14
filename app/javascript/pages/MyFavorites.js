@@ -4,7 +4,7 @@ const MyFavorite = () => {
   
     return (
       <>
-      <h1>This is the MyFavorite</h1>
+        <h1>This is the MyFavorite</h1>
       </>
     );
   }
