@@ -23,13 +23,13 @@ const App = (props) => {
         <Header {...props} />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/trailsindex" element={<UnprotectedIndex trails={ mockTrails }/>} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/myfavorites" element={<MyFavorite />} />
             <Route path="/myindex" element={<ProtectedIndex />} />
             <Route path="/mytrail" element={<ProtectedShow />} />
             <Route path="/trailedit" element={<TrailEdit />} />
             <Route path="/trailnew" element={<TrailNew />} />
-            <Route path="/trails" element={<UnprotectedIndex />} />
             <Route path="/show" element={<UnprotectedShow />}  />
             <Route path="/*" element={<NotFound />}/>
           </Routes>
