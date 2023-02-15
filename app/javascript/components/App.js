@@ -1,4 +1,5 @@
 import React from "react"
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -15,6 +16,7 @@ import UnprotectedShow from "./pages/UnprotectedShow";
 import mockTrails from "./mockTrails";
 
 const App = (props) => {
+  const [trails, setTrails] = useState(mockTrails)
   
     return (
       <BrowserRouter>
@@ -27,7 +29,7 @@ const App = (props) => {
             <Route path="/mytrail" element={<ProtectedShow />} />
             <Route path="/trailedit" element={<TrailEdit />} />
             <Route path="/trailnew" element={<TrailNew />} />
-            <Route path="/index" element={<UnprotectedIndex />} />
+            <Route path="/index" element={<UnprotectedIndex trails={mockTrails} />} />
             <Route path="/show" element={<UnprotectedShow />}  />
             <Route path="/*" element={<NotFound />}/>
           </Routes>
