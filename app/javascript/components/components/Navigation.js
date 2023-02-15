@@ -23,7 +23,7 @@ const Navigation = ({
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/index" className="nav-link">
+          <NavLink to="/trails" className="nav-link">
             View All Trails
           </NavLink>
         </NavItem>
