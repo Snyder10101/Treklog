@@ -1,17 +1,17 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Footer from "./Footer";
-import Header from "./Header";
-import AboutUs from "../pages/AboutUs";
-import MyFavorite from "../pages/MyFavorites";
-import NotFound from "../pages/NotFound";
-import Home from "../pages/Home";
-import ProtectedIndex from "../pages/ProtectedIndex";
-import ProtectedShow from "../pages/ProtectedShow";
-import TrailEdit from "../pages/TrailEdit";
-import TrailNew from "../pages/TrailNew";
-import UnprotectedIndex from "../pages/UnprotectedIndex";
-import UnprotectedShow from "../pages/UnprotectedShow";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import AboutUs from "./pages/AboutUs";
+import MyFavorite from "./pages/MyFavorites";
+import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+import ProtectedIndex from "./pages/ProtectedIndex";
+import ProtectedShow from "./pages/ProtectedShow";
+import TrailEdit from "./pages/TrailEdit";
+import TrailNew from "./pages/TrailNew";
+import UnprotectedIndex from "./pages/UnprotectedIndex";
+import UnprotectedShow from "./pages/UnprotectedShow";
 import mockTrails from "./mockTrails";
 
 const App = (props) => {
