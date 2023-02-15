@@ -23,7 +23,7 @@ const Navigation = ({
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/trails" className="nav-link">
+          <NavLink to="/trailsindex" className="nav-link">
             View All Trails
           </NavLink>
         </NavItem>
@@ -39,6 +39,13 @@ const Navigation = ({
           <a href={new_user_route} className="nav-link">
             Sign Up
           </a>
+        </NavItem>
+        )}
+        { logged_in && (
+        <NavItem>
+          <NavLink to="/trailnew" className="nav-link">
+            Add a New Trail
+          </NavLink>
         </NavItem>
         )}
         { logged_in && (
