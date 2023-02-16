@@ -50,7 +50,8 @@ trail = [
 ]
 
 trail.each do |attribute|
-    Trail.create attribute
+    user.trails.create(attribute)
+    # Trail.create attribute
     puts "creating #{attribute}"
 end
 
