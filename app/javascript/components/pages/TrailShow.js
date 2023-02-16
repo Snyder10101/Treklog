@@ -1,14 +1,9 @@
 import React from "react"
 import { useParams } from "react-router-dom";
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-} from "reactstrap";
+import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button, NavItem, Nav} from "reactstrap";
+import { NavLink } from "react-router-dom"
 
-const UnprotectedShow = ({ trails }) => {
+const TrailShow = ({ trails, logged_in }) => {
   const { id } = useParams()
   let currentTrail = trails?.find((trail) => trail.id === +id)
     return (
@@ -21,9 +16,10 @@ const UnprotectedShow = ({ trails }) => {
           key={id}
         >
           <img
-            alt={`apartment listing for apartment located on ${currentTrail.name}`}
+            alt={"Picture of trail"}
             src={`${currentTrail.image}`}
           />
+          <div>
           <CardBody>
             <CardTitle tag="h5">
               {`${currentTrail.name} `}
@@ -44,10 +40,25 @@ const UnprotectedShow = ({ trails }) => {
               {`${currentTrail.description}`}
             </CardText>
           </CardBody>
+          <Nav>
+          { logged_in && (
+            <NavItem>
+              <NavLink to="/trailedit" className="nav-link">
+                Edit Trail
+              </NavLink>
+              <NavLink to="/trailsindex">
+                <Button type="delete" data-testid="delete-button">
+                  Delete Trail
+                </Button>
+              </NavLink>
+            </NavItem>
+            )}
+          </Nav>
+        </div>
         </Card>
       )}
     </main>
   )
 }
 
-export default UnprotectedShow
+export default TrailShow
