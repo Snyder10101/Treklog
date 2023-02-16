@@ -1,11 +1,6 @@
 import React from "react";
-import {
-  Card,
-  CardBody,
-  Button,
-  CardTitle,
-  CardSubtitle,
-} from "reactstrap";
+import { Card, CardBody, Button, CardTitle, CardSubtitle, } from "reactstrap";
+import { NavLink } from "react-router-dom"
 
 const UnprotectedIndex = ({ trails }) => {
     return (
@@ -19,7 +14,11 @@ const UnprotectedIndex = ({ trails }) => {
               <CardSubtitle className="mb-2 text-muted" tag="h6">
                 location {trail.location} Distance:{trail.distance}
               </CardSubtitle>
-              <Button>Learn More</Button>
+              <Button>
+                <NavLink to={`/show/${trail.id}`}>
+                  Learn More
+                </NavLink>
+                </Button>
             </CardBody>
           </Card>
         );
