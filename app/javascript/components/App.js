@@ -30,7 +30,7 @@ const App = (props) => {
             <Route path="/mytrail" element={<ProtectedShow />} />
             <Route path="/trailedit" element={<TrailEdit />} />
             <Route path="/trailnew" element={<TrailNew />} />
-            <Route path="/show" element={<UnprotectedShow />}  />
+            <Route path="/show/:id" element={<UnprotectedShow trails={ mockTrails }/>}  />
             <Route path="/*" element={<NotFound />}/>
           </Routes>
           <Footer />
