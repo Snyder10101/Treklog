@@ -17,7 +17,9 @@ import mockTrails from "./mockTrails";
 const App = (props) => {
   const [trails, setTrails] = useState(mockTrails)
   
-  
+  const createTrail = (trail) => {
+    console.log(trail)
+  }
 
 
     return (
@@ -30,7 +32,7 @@ const App = (props) => {
             <Route path="/myfavorites" element={<MyFavorite />} />
             <Route path="/myindex" element={<ProtectedIndex />} />
             <Route path="/trailedit" element={<TrailEdit />} />
-            <Route path="/trailnew" element={<TrailNew />} />
+            <Route path="/trailnew" element={<TrailNew createTrail={ createTrail } />} />
             <Route path="/show/:id" element={<TrailShow trails={ mockTrails } logged_in={props.logged_in} />}  />
             <Route path="/*" element={<NotFound />}/>
           </Routes>
