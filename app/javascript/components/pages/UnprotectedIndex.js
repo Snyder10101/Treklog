@@ -18,7 +18,7 @@ const UnprotectedIndex = ({ trails }) => {
                 <NavLink to={`/show/${trail.id}`}>
                   Learn More
                 </NavLink>
-                </Button>
+              </Button>
             </CardBody>
           </Card>
         );
