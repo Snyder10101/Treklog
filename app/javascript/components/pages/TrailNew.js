@@ -12,14 +12,14 @@ const TrailNew = ({ createTrail, currentUser }) => {
     difficulty: "",
     description: "",
     image: "",
-    user_id: currentUser
+    user_id: currentUser?.id
   })
   const handleChange = (e) => {
     setNewTrail({...newTrail, [e.target.name]: e.target.value })
   }
   
+  const navigate = useNavigate()
   const handleSubmit = () => {
-    const navigate = useNavigate()
       createTrail(newTrail)
       navigate("/trailsindex")
   }

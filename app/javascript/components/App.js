@@ -44,8 +44,30 @@ const App = (props) => {
       .catch((errors) => console.log("Trail create errors:", errors))
   }
 
+  const updateTrail = (trail, id) => {
+    fetch(`/trails/${id}`, {
+      body: JSON.stringify(trail),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+      .then((response) => response.json())
+      .then((payload) => readTrail())
+      .catch((errors) => console.log("Trail edit errors:", errors))
+  }
 
-
+  const deleteTrail = (id) => {
+    fetch(`/trails/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then((response) => response.json())
+    .then((payload) => readTrail())
+    .catch((errors) => console.log("Trail delete errors:", errors))
+  }
 
   return (
     <BrowserRouter>
@@ -56,9 +78,9 @@ const App = (props) => {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/myfavorites" element={<MyFavorite />} />
           <Route path="/myindex" element={<ProtectedIndex trails={trails} current_user={props.current_user} />} />
-          <Route path="/trailedit" element={<TrailEdit />} />
+          <Route path="/trailedit/:id" element={<TrailEdit trails={trails} updateTrail={updateTrail} currentUser={props.current_user}/>} />
           <Route path="/trailnew" element={<TrailNew createTrail={ createTrail } currentUser={props.current_user}/>} />
-          <Route path="/show/:id" element={<TrailShow trails={ trails } logged_in={props.logged_in} />}  />
+          <Route path="/show/:id" element={<TrailShow trails={ trails } deleteTrail={deleteTrail} logged_in={props.logged_in} />}  />
           <Route path="/*" element={<NotFound />}/>
         </Routes>
       <Footer />
