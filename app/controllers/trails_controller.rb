@@ -8,7 +8,7 @@ class TrailsController < ApplicationController
         if trail.valid?
             render json: trail
         else
-            rendr json: trail.errors, status:422
+            render json: trail.errors, status:422
         end
     end
     def update
