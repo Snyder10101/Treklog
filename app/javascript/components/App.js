@@ -12,6 +12,7 @@ import TrailNew from "./pages/TrailNew";
 import UnprotectedIndex from "./pages/UnprotectedIndex";
 import TrailShow from "./pages/TrailShow";
 import mockTrails from "./mockTrails";
+import "../../assets/stylesheets/application.scss"
 
 const App = (props) => {
   

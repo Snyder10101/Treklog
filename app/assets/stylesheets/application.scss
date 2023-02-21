@@ -14,3 +14,45 @@
  *= require_self
  */
  @import "bootstrap";
+
+.background {
+    // background-size: cover;
+    // background-position: center!important; 
+    // height: 850px!important;
+    // width: 500px!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center!important;
+    align-items: center;
+  }
+.background-image {
+    background-position: center;
+    height: 700px;
+    width: auto;
+ } 
+.background h1 {
+    color: black!important;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+.background p {
+    color: black!important;
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 30rem;
+    margin: 0;
+  }
+  
+.footer {
+    height: 1.5rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+ 
