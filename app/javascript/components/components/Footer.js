@@ -4,7 +4,7 @@ const Footer = () => {
   
     return (
       <>
-        <h1 className="footer">This is the Footer</h1>
+        <footer className="footer"> | &copy;Team-CMOD 2023 | CAPSTONE |</footer>
       </>
     );
   }
