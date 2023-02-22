@@ -50,11 +50,11 @@ default: &default
 
 development:
   <<: *default
-  compile: true
-    node:
+  node:
     global: false
     __filename: false
     __dirname: false
+  compile: true
   
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
@@ -86,7 +86,7 @@ test:
 
 production:
   <<: *default
-    node:
+  node:
     global: false
     __filename: false
     __dirname: false
