@@ -13,13 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ 
  @import "bootstrap";
 
 .background {
-    // background-size: cover;
-    // background-position: center!important; 
-    // height: 850px!important;
-    // width: 500px!important;
     display: flex;
     flex-direction: column;
     justify-content: center!important;
@@ -52,7 +49,22 @@
     justify-content: space-around;
     display: flex;
     position: fixed;
-    bottom: 0;
+    // bottom: 0;
 }
 
- 
+.about-cards {
+  margin: 20px auto;
+  width: 600px;
+  height: 600px;
+  background-color:#fff;
+  display: grid !important;
+  grid-template-columns: 50% 50% !important;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+
+// .card {
+//   margin: 20px!important;
+// }
