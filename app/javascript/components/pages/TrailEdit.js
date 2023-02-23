@@ -26,10 +26,12 @@ const TrailEdit = ({ trails, updateTrail, currentUser }) => {
       updateTrail(editTrail, currentTrail.id)
       navigate(`/show/${currentTrail.id}`)
   }
- 
+  console.log(currentUser);
+  console.log(currentTrail);
   return (
     <>
       <h1>Edit a Trail</h1>
+    {currentUser.id == currentTrail.user_id && 
       <Form>
         <Row>
           <Col md={6}>
@@ -128,6 +130,7 @@ const TrailEdit = ({ trails, updateTrail, currentUser }) => {
           Edit Trail
         </Button>
       </Form>
+      } 
     </>
   )
 }
