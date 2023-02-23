@@ -86,6 +86,7 @@ const App = (props) => {
         </Routes>
       <Footer />
     </BrowserRouter>
+    
   )
 }
 
