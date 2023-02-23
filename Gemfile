@@ -75,4 +75,4 @@ gem "devise", "~> 4.8"
 
 gem "bootstrap", "~> 5.2"
 
-# gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-cors', :require => 'rack/cors'
