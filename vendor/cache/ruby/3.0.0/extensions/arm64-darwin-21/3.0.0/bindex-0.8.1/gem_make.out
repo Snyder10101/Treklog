@@ -1,0 +1,15 @@
+current directory: /Users/learnacademy/Desktop/Hotel/treklog/vendor/cache/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/learnacademy/.rvm/rubies/ruby-3.0.0/bin/ruby -I /Users/learnacademy/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20230223-18797-8t2q63.rb extconf.rb
+creating Makefile
+
+current directory: /Users/learnacademy/Desktop/Hotel/treklog/vendor/cache/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/learnacademy/Desktop/Hotel/treklog/vendor/cache/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/learnacademy/Desktop/Hotel/treklog/vendor/cache/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20230223-18797-orh5g1/skiptrace/internal
