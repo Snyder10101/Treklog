@@ -16,6 +16,9 @@ import "../../assets/stylesheets/application.scss"
 
 const App = (props) => {
   
+  const [favourites, setFavourites] = useState([]);
+	const [searchValue, setSearchValue] = useState('');
+  
   const [trails, setTrails] = useState([])
   
     useEffect(() => {

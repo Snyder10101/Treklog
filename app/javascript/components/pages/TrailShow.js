@@ -7,49 +7,40 @@ const TrailShow = ({ trails, deleteTrail, logged_in }) => {
   const { id } = useParams()
   let currentTrail = trails?.find((trail) => trail.id === +id)
     return (
-      <main>
+      <main className="show-page">
       {currentTrail && (
-        <Card
-          style={{
-            width: "18rem"
-          }}
-          key={id}
-        >
+        <>
           <img
             alt={"Picture of trail"}
             src={`${currentTrail.image}`}
+            className="show-image"
           />
-          <div>
-          <CardBody>
-            <CardTitle tag="h5">
-              {`${currentTrail.name} `}
-            </CardTitle>
-            <CardSubtitle
-              className="mb-2 text-muted"
-              tag="h6"
-            >
-              {`${currentTrail.distance} miles, Difficulty: ${currentTrail.difficulty}`}
-            </CardSubtitle>
-            <CardSubtitle
-              className="mb-2 text-muted"
-              tag="h6"
-            >
-              {`${currentTrail.duration}, ${currentTrail.location}`}
-            </CardSubtitle>
-            <CardText>
-              {`${currentTrail.description}`}
-            </CardText>
-          </CardBody>
+          <div className="show-info">
+          <h1 style={{color: "white"}} className="index-title">Trail Information:</h1>
+          <br></br>
+          <h2 className="show-name" style={{color:"black"}}> <span className="show-content">Trail Name: </span>{`${currentTrail.name} `}</h2>
+          <br></br>
+          <h2 className="show-name"><span className="show-content">Distance: </span> {`${currentTrail.distance} miles`} </h2>
+          <br></br>
+          <h2 className="show-name"><span className="show-content">Difficulty: </span>{`${currentTrail.difficulty}`}</h2>
+          <br></br>
+          <h2 className="show-name"><span className="show-content">Duration: </span>{`${currentTrail.duration}`}</h2>
+          <br></br>
+          <h2 className="show-name"><span className="show-content">Location: </span>{`${currentTrail.location}`}</h2>
+          <br></br>
+          <h2 className="show-name"><span className="show-content">Description: </span>{`${currentTrail.description}`}</h2>
           <Nav>
           { logged_in && (
             <NavItem>
+              <Button>
               <NavLink to={`/trailedit/${id}`} className="nav-link">
                 Edit Trail
               </NavLink>
+              </Button>
               <NavLink to="/trailsindex">
                 <Button onClick={() => {
                   deleteTrail(id)
-                }}>
+                }} className="show-buttons">
                   Delete Trail
                 </Button>
               </NavLink>
@@ -57,7 +48,7 @@ const TrailShow = ({ trails, deleteTrail, logged_in }) => {
             )}
           </Nav>
         </div>
-        </Card>
+        </>
       )}
     </main>
   )
