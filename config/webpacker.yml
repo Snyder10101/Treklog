@@ -77,7 +77,7 @@ test:
   <<: *default
   compile: true
 
-ignored_paths:
+  ignored_paths:
     - '**/*.test.js'
 
   # Compile test packs to a separate directory
