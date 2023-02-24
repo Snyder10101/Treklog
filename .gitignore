@@ -37,7 +37,11 @@
 yarn-debug.log*
 .yarn-integrity
 /coverage
+<<<<<<< Updated upstream
 .DS_Store
 /.DS_Store
 /assets/.DS_Store
 .gitignore
+=======
+/.DS_Store
+>>>>>>> Stashed changes
