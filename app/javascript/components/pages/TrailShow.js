@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button, NavItem, Nav} from "reactstrap";
 import { NavLink } from "react-router-dom"
 
-const TrailShow = ({ trails, deleteTrail, logged_in }) => {
+const TrailShow = ({ trails, deleteTrail, logged_in, currentUser }) => {
   const { id } = useParams()
   let currentTrail = trails?.find((trail) => trail.id === +id)
     return (
@@ -32,11 +32,13 @@ const TrailShow = ({ trails, deleteTrail, logged_in }) => {
           <Nav>
           { logged_in && (
             <NavItem>
+              { currentUser.id == currentTrail.user_id && (
               <Button className="show-buttons">
               <NavLink to={`/trailedit/${id}`} className="show-link">
                 Edit Trail
               </NavLink>
               </Button>
+              )}
               <Button to="/trailsindex" className="show-buttons">
                 <NavLink onClick={() => {
                   deleteTrail(id)
