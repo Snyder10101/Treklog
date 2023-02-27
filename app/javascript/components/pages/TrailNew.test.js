@@ -26,7 +26,7 @@ describe("<TrailNew />", () => {
     </MemoryRouter>
     )
     const title = screen.getByText("Create", { exact: false });
-    expect(title.textContent).toEqual("Create a new Trail");
+    expect(title.textContent).toEqual("Create a New Trail");
   });
   it("has a button", () => {
     render(
@@ -35,7 +35,7 @@ describe("<TrailNew />", () => {
       </BrowserRouter>
     )
     const button = screen.getByRole("button", {
-      name: /Add Trail/i,
+      name: /Add New Trail/i,
     })
     expect(button).toBeInTheDocument();
   })
@@ -58,12 +58,12 @@ describe("<TrailNew />", () => {
     const currentUser = "user123"
     const { getByText, getByPlaceholderText } = render(<BrowserRouter >
     <TrailNew createTrail={createTrail} currentUser={currentUser} /> </BrowserRouter>)
-    fireEvent.change(getByPlaceholderText("Type the trail name"), { target: { value: "Test Trail" } })
-    fireEvent.change(getByPlaceholderText("Input the location"), { target: { value: "Test Location" } })
-    fireEvent.change(getByPlaceholderText("How many miles?"), { target: { value: "5" } })
-    fireEvent.change(getByPlaceholderText("How long was the hike?"), { target: { value: "2 hours" } })
-    fireEvent.change(getByPlaceholderText("Beginner, Intermediate, Advanced"), { target: { value: "Beginner" } })
-    fireEvent.change(getByPlaceholderText("Description"), { target: { value: "Test Description" } })
-    fireEvent.change(getByPlaceholderText("image"), { target: { value: "https://example.com/image.jpg" } })
+    fireEvent.change(getByPlaceholderText("Type the Trail Name..."), { target: { value: "Test Trail" } })
+    fireEvent.change(getByPlaceholderText("Type the City and State..."), { target: { value: "Test Location" } })
+    fireEvent.change(getByPlaceholderText("Type the URL Image..."), { target: { value: "https://example.com/image.jpg" } })
+    fireEvent.change(getByPlaceholderText("Type a Description..."), { target: { value: "Test Description" } })
+    fireEvent.change(getByPlaceholderText("Choose between Beginner, Intermediate or Advanced..."), { target: { value: "Beginner" } })
+    fireEvent.change(getByPlaceholderText("Type the # of miles..."), { target: { value: "5" } })
+    fireEvent.change(getByPlaceholderText("Type the # of hours..."), { target: { value: "2 hours" } })
   })
 });
