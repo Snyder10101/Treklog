@@ -32,8 +32,8 @@ const TrailShow = ({ trails, deleteTrail, logged_in }) => {
           <Nav>
           { logged_in && (
             <NavItem>
-              <Button>
-              <NavLink to={`/trailedit/${id}`} className="nav-link">
+              <Button className="show-buttons">
+              <NavLink to={`/trailedit/${id}`} className="show-link">
                 Edit Trail
               </NavLink>
               </Button>
