@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent} from "@testing-library/react";
 import TrailNew from "./TrailNew";
-import { BrowserRouter, Router } from "react-router-dom";
+import { BrowserRouter, Router, MemoryRouter } from "react-router-dom";
 import { object } from "prop-types";
 import '@testing-library/jest-dom'
 
@@ -12,31 +12,39 @@ describe("<TrailNew />", () => {
   };
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    render(<TrailNew />, div);
-  });
+    render(
+      <MemoryRouter>
+        <TrailNew currentUser={current_user} /> 
+      </MemoryRouter>
+    )
+  })
   it("can see the title of the page", () => {
     const div = document.createElement("div");
-    render(<TrailNew />, div);
+    render(
+    <MemoryRouter>
+      <TrailNew currentUser={current_user} /> 
+    </MemoryRouter>
+    )
     const title = screen.getByText("Create", { exact: false });
     expect(title.textContent).toEqual("Create a new Trail");
   });
   it("has a button", () => {
     render(
       <BrowserRouter>
-        <TrailNew />
-      </BrowserRouter>
-    );
-    const button = screen.getByRole("button", {
-      name: /Add Trail/i,
-    });
-    expect(button).toBeInTheDocument();
-  });
-  it("has a form with all entries", () => {
-    render(
-      <BrowserRouter>
         <TrailNew currentUser={current_user} />
       </BrowserRouter>
-    );
+    )
+    const button = screen.getByRole("button", {
+      name: /Add Trail/i,
+    })
+    expect(button).toBeInTheDocument();
+  })
+  it("has a form with all entries", () => {
+    render(
+      <MemoryRouter>
+        <TrailNew currentUser={current_user} /> 
+      </MemoryRouter>
+    )
     const formName = screen.getByText("Name" ,{exact: false})
     expect(formName.getAttribute("for")).toEqual("trail name")
     const formLocation = screen.getByText(/location/i)

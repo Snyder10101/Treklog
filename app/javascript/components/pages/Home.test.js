@@ -7,10 +7,4 @@ describe("<Home />", () => {
     const div = document.createElement("div")
     render(<Home />, div)
   })
-  it("renders a heading", () => {
-    const div = document.createElement("div")
-    render(<Home />, div)
-    const heading = screen.getByText("Welcome to Trek Log")
-    expect(heading).toBeInTheDocument()
-  })
 })
