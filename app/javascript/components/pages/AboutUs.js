@@ -74,10 +74,7 @@ const AboutUs = () => {
             Meet Dave
           </PopoverHeader>
             <PopoverBody style={{ margin: '1rem'}} className="about-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamusterry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-              labore wes anderson cred nesciunt sapiente ea proident.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-              terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-              labore wes anderson cred nesciunt sapiente ea proident.
+              Hi, I'm Dave, a junior full-stack developer who loves creating innovative software to solve real-world problems. When I'm not coding, I enjoy snowboarding, hiking, and gaming. This app combines my passion for technology and the outdoors, and I hope it enhances your life. Thanks for choosing this app!
             </PopoverBody>
             <Button active outline size="sm" className="about-button">
               <a href="https://github.com/Dgfarm02" target="_blank" className="about-link">Visit my Github</a>
