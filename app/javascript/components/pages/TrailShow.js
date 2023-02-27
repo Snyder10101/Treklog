@@ -37,13 +37,13 @@ const TrailShow = ({ trails, deleteTrail, logged_in }) => {
                 Edit Trail
               </NavLink>
               </Button>
-              <NavLink to="/trailsindex">
-                <Button onClick={() => {
+              <Button to="/trailsindex" className="show-buttons">
+                <NavLink onClick={() => {
                   deleteTrail(id)
-                }} className="show-buttons">
+                }} className="show-link">
                   Delete Trail
-                </Button>
-              </NavLink>
+                </NavLink>
+              </Button>
             </NavItem>
             )}
           </Nav>
