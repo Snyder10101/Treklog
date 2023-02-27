@@ -68,7 +68,7 @@
   grid-row-gap: 30px;
   padding-top: 30px;
   padding-left: 12%;
-  padding-bottom: 30px;
+  padding-bottom: 99px !important;
 }
 
 .index-container {
@@ -126,6 +126,7 @@ div.card-body {
 .about-images {
   height: 300px !important;
   border-radius: 10px !important;
+  // object-fit: contain;
 }
 
 .about-name {
@@ -346,7 +347,7 @@ a {
 }
 
 .show-page {
-  background: #9869 !important;
+  background: linear-gradient(to right,  #9869 14%, #9dc183 113%) !important;
   display:flex;
   justify-content:space-around;
 }
@@ -359,6 +360,41 @@ h2.show-name {
   font-size: x-large;
 }
 
+.show-link {
+  color: white
+}
+
 .show-buttons {
-  
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.edit-title {
+  text-align: center;
+  font-family: 'Playfair Display';
+  padding-top: 20px;
+  color: white !important
+}
+
+.edit-form {
+  margin:20px;
+  font-family: 'Playfair Display';
+  color: white;
+  font-size:larger;
+  object-fit: contain;
+}
+
+.new-title {
+  text-align: center;
+  font-family: 'Playfair Display';
+  padding-top: 20px;
+  color: black !important
+}
+
+.my-trail-title {
+  text-align: center;
+  font-family: 'Playfair Display';
+  padding-top: 20px;
+  color: black !important
+
 }
