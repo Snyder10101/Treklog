@@ -84,7 +84,7 @@ const App = (props) => {
           <Route path="/myindex" element={<ProtectedIndex trails={trails} current_user={props.current_user} />} />
           <Route path="/trailedit/:id" element={<TrailEdit trails={trails} updateTrail={updateTrail} currentUser={props.current_user}/>} />
           <Route path="/trailnew" element={<TrailNew createTrail={ createTrail } currentUser={props.current_user}/>} />
-          <Route path="/show/:id" element={<TrailShow trails={ trails } deleteTrail={deleteTrail} logged_in={props.logged_in} />}  />
+          <Route path="/show/:id" element={<TrailShow trails={ trails } deleteTrail={deleteTrail} logged_in={props.logged_in} currentUser={props.current_user} />}  />
           <Route path="/*" element={<NotFound />}/>
         </Routes>
       <Footer />
