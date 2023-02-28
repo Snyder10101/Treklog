@@ -15,10 +15,12 @@ const UnprotectedIndex = ({ trails }) => {
               <CardTitle tag="h5" className="index-name"> {trail.name}</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
                 <span className="index-title">Location: </span>{trail.location} 
+                <br></br>
                 <span className="index-title"> Difficulty: </span>{trail.difficulty} 
+                <br></br>
                 <span className="index-title"> Distance:</span> {trail.distance} miles
               </CardSubtitle>
-              <Button color="success" outline className="index-button">
+              <Button to={`/show/${trail.id}`} color="success" outline className="index-button">
                 <NavLink to={`/show/${trail.id}`} className="index-link">
                   Click to Explore
                 </NavLink>

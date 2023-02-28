@@ -18,7 +18,7 @@ const AboutUs = () => {
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display:ital,wght@0,500;1,700&display=swap');
     </style>
-    <div className="about-overlay" style={{ backgroundImage: "url(https://images.pexels.com/photos/2254030/pexels-photo-2254030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)", backgroundSize: 'cover', height:'1050px', backgroundPosition: 'center'}} >
+    <div className="about-overlay" style={{ backgroundImage: "url(https://images.pexels.com/photos/2254030/pexels-photo-2254030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)", backgroundSize: 'cover', height:'1100px', backgroundPosition: 'center'}} >
     <div className="container">
     <main className="about-cards">
       <Card style={{ width: '18rem' }} className="individual-card">
@@ -75,6 +75,7 @@ const AboutUs = () => {
           </PopoverHeader>
             <PopoverBody style={{ margin: '1rem'}} className="about-body">
               Hi, I'm Dave, a junior full-stack developer who loves creating innovative software to solve real-world problems. When I'm not coding, I enjoy snowboarding, hiking, and gaming. This app combines my passion for technology and the outdoors, and I hope it enhances your life. Thanks for choosing this app!
+              <p style={{color: "white", fontSize: "small"}}>Hi, I'm Dave, a junior full-stack developer who loves creating innovative software to solve real-world problems. When I'm not</p>
             </PopoverBody>
             <Button active outline size="sm" className="about-button">
               <a href="https://github.com/Dgfarm02" target="_blank" className="about-link">Visit my Github</a>
@@ -104,10 +105,8 @@ const AboutUs = () => {
             Meet Christian
           </PopoverHeader>
             <PopoverBody style={{ margin: '1rem'}} className="about-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamusterry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-              labore wes anderson cred nesciunt sapiente ea proident.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-              terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-              labore wes anderson cred nesciunt sapiente ea proident.
+            Hey there, I'm a junior full-stack developer who's passionate about both coding and the great outdoors. When I'm not immersed in my latest project, you can usually find me hitting the trails, camping out under the stars, or just enjoying the beauty of nature.
+            I've always been fascinated by technology and the incredible things we can achieve with it. That's why I decided to pursue a career in software development. I love the challenge of building complex systems that can make people's lives easier and more enjoyable. Whether I'm working on the front-end or back-end, I'm always striving to create user-friendly and responsive interfaces that people will love.
             </PopoverBody>
             <Button active outline size="sm" className="about-button">
               <a href="https://github.com/Snyder10101" target="_blank" className="about-link">Visit my Github</a>
@@ -137,10 +136,7 @@ const AboutUs = () => {
             Meet Monica
           </PopoverHeader>
             <PopoverBody style={{ margin: '1rem'}} className="about-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamusterry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-              labore wes anderson cred nesciunt sapiente ea proident.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-              terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-              labore wes anderson cred nesciunt sapiente ea proident.
+              Hi my name is Monica, I'm a Junior Full-Stack Software Developer and enthusiastic hiker who's excited to bring my passion for the great outdoors to this hiking app. Whether I'm exploring local trails or venturing out to new destinations, I love nothing more than getting outside and breathing in the fresh air. When I'm taking a break from hiking, I love to curl up with a good book and lose myself in a story. With this app, I am excited to build a platform where hikers like myself can connect, share their experiences, and discover new adventures.
             </PopoverBody>
             <Button active outline size="sm" className="about-button">
               <a href="https://github.com/monicaarganda" target="_blank" className="about-link">Visit my Github</a>
