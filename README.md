@@ -20,9 +20,9 @@ After you've logged in, you can start sharing your hiking adventures with other 
 
 ## Another option 
 
-Git clone https://github.com/Snyder10101/Treklog.git
-cd into Treklog
-terminal command rails s
+1. Git clone https://github.com/Snyder10101/Treklog.git.
+2. cd into Treklog.
+3. terminal command > rails s
 
 # Dependencies
 
