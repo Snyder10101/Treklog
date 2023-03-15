@@ -18,6 +18,12 @@ Fill out the sign-up form with your information and click "Sign Up".
 Once you've signed up, you can log in to your account by clicking the "Log In" button in the navigation bar and entering your login credentials.
 After you've logged in, you can start sharing your hiking adventures with other hikers on TrekLog.
 
+## Another option 
+
+Git clone https://github.com/Snyder10101/Treklog.git
+cd into Treklog
+terminal command rails s
+
 # Dependencies
 
 TrekLog is built using the following technologies:
