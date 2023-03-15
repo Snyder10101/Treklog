@@ -1,4 +1,4 @@
-# TrekLog
+# 🌄 TrekLog
 
 TrekLog is a web-based app designed for hikers and outdoor enthusiasts to share their hiking experiences, photos, and information about hiking trails. This app is great for those who want to document their hiking journeys and connect with other hikers.
 
@@ -18,7 +18,9 @@ Fill out the sign-up form with your information and click "Sign Up".
 Once you've signed up, you can log in to your account by clicking the "Log In" button in the navigation bar and entering your login credentials.
 After you've logged in, you can start sharing your hiking adventures with other hikers on TrekLog.
 
-## 👨‍💻 How To start App
+# OR
+
+## 👨‍💻 How To start App through repo
 
 ```
 $ git clone https://github.com/Snyder10101/Treklog.git
